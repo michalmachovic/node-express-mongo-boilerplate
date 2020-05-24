@@ -1,0 +1,31 @@
+{
+  "name": "node-express-mongo-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://michalmachovic:1electronica*@github.com/michalmachovic/node-express-mongo-boilerplate.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michalmachovic/node-express-mongo-boilerplate/issues"
+  },
+  "homepage": "https://github.com/michalmachovic/node-express-mongo-boilerplate#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "connect-mongodb-session": "^2.3.2",
+    "csurf": "^1.11.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mongodb": "^3.5.7",
+    "mongoose": "^5.9.15"
+  }
+}

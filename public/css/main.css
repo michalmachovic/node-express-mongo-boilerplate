@@ -1,0 +1,7 @@
+body {
+    font-family: arial;
+}
+
+nav ul li {
+    display: inline-block;
+}
