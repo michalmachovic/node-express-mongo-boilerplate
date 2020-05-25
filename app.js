@@ -13,8 +13,9 @@ const mongoose = require('mongoose');
 const User = require('./models/user');
 const session = require('express-session');
 const MongoDBStore = require('connect-mongodb-session')(session);
-const MONGODB_URI = 'mongodb+srv://macho:7EfwuOmBNUmbjG2T@cluster0-gconm.mongodb.net/test?w=majority';
+const MONGODB_URI = 'mongodb+srv://macho:7EfwuOmBNUmbjG2T@cluster0-gconm.mongodb.net/node-express-mongo-boilerplate?w=majority';
 const csrf = require('csurf');
+const flash = require('connect-flash');
 
 //add this to make public folder available to serve static files, like css
 app.use(express.static(path.join(__dirname, 'public')));
@@ -35,6 +36,8 @@ app.use(
     })
 );
 
+app.use(flash());
+
 app.use((req, res, next) => {
     if (!req.session.user) {
         return next();
@@ -47,7 +50,10 @@ app.use((req, res, next) => {
     .catch(err => console.log(err));
 });
 
+const webRoutes = require('./routes/web');
+const adminRoutes = require('./routes/admin');
 
+app.use(bodyParser.urlencoded({extended: false}));
 app.use(csrfProtection);
 app.use((req, res, next) => {
     res.locals.isAuthenticated = req.session.isLoggedIn;
@@ -55,10 +61,9 @@ app.use((req, res, next) => {
     next();
 });
 
-
-
-const webRoutes = require('./routes/web');
 app.use(webRoutes);
+app.use('/admin', adminRoutes);
+
 
 mongoose
     .connect(

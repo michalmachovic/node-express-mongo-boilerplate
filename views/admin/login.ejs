@@ -1,0 +1,35 @@
+<%- include('../includes/head.ejs') %>
+<title><%= pageTitle %></title>
+</head>
+
+<body>
+    <main>
+        <% if (errorMessage) { %>
+            <div class="user-message user-message--error">
+                <%= errorMessage %>
+
+            </div>
+        <% } %>
+        <div class="login">
+            <div>
+                <form method="post" action="/admin/login">
+                    <div>
+                        <label>email</label>
+                        <input type="email" name="email" />
+                    </div>
+
+                    <div>
+                        <label>password</label>
+                        <input type="password" name="password" />
+                    </div>
+
+                    <div>
+                        <input type="submit" value="login" />
+                    </div>
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                </form>
+            </div>
+        </div>
+    </main>        
+</body>
+</html>
