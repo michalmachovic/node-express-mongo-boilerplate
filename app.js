@@ -11,6 +11,7 @@ app.set('views', 'views');
 //db connection, use authentication, csrf protection
 const mongoose = require('mongoose');
 const User = require('./models/user');
+const News = require('./models/news');
 const session = require('express-session');
 const MongoDBStore = require('connect-mongodb-session')(session);
 const MONGODB_URI = 'mongodb+srv://macho:7EfwuOmBNUmbjG2T@cluster0-gconm.mongodb.net/node-express-mongo-boilerplate?w=majority';
