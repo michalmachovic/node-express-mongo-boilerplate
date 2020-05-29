@@ -1,0 +1,29 @@
+<%- include('includes/head.ejs') %>
+<title><%= pageTitle %></title>
+</head>
+
+<body class="admin">
+    <%- include('includes/nav.ejs') %>
+    <main>
+        <div class="add-news">
+            <form method="post" action="add-news">
+                <div>
+                    <label for="title">Title</label>
+                    <input type="text" name="title" id="title" value="<%= item.title %>" />
+                </div>
+
+                <div>
+                    <label for="title">Content</label>
+                    <textarea name="body" id="body"><%= item.body %></textarea>
+                </div>    
+
+                <div>
+                    <label></label>
+                    <input type="submit" value="submit"></input>
+                </div>
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            </form>
+        </div>
+    </main>        
+</body>
+</html>

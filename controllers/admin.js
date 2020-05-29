@@ -65,10 +65,25 @@ exports.getNews = (req, res, next) => {
     })
 }
 
+exports.getNewsItem = (req, res, next) => {
+    const id = req.params.id;
+    News.findById(id)
+    .then(result => {
+        res.render('admin/news-item', {
+            pageTitle: 'news',
+            item: result
+        });    
+    })
+    .catch(err => {
+        console.log(err);
+    })
+}
+
 
 exports.getAddNews = (req, res, next) => {
-    res.render('admin/add-news', {
-        pageTitle: 'add news'
+    res.render('admin/news-item', {
+        pageTitle: 'add news',
+        item: {}
     });
 }
 

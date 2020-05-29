@@ -1,8 +1,8 @@
-<%- include('../includes/head.ejs') %>
+<%- include('includes/head.ejs') %>
 <title><%= pageTitle %></title>
 </head>
 
-<body>
+<body class="admin">
     <main>
         <% if (errorMessage) { %>
             <div class="user-message user-message--error">
@@ -10,8 +10,8 @@
 
             </div>
         <% } %>
-        <div class="login">
-            <div>
+        <div class="login-form">
+            <div class="login">
                 <form method="post" action="/admin/login">
                     <div>
                         <label>email</label>
@@ -24,6 +24,7 @@
                     </div>
 
                     <div>
+                        <label></label>
                         <input type="submit" value="login" />
                     </div>
                     <input type="hidden" name="_csrf" value="<%= csrfToken %>">

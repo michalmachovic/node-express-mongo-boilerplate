@@ -6,24 +6,22 @@
     <%- include('includes/nav.ejs') %>
     <main>
         <div class="news">
-            NEWS
-
             <ul class="news">
                 <% news.forEach(function(item){ %>
                     <li>
-                        <div class="title">
-                            <%= item.title %>
-                        </div>
+                        <a href="news/<%= item.id %>">
+                            <div class="title">
+                                <%= item.title %>
+                            </div>
 
-                        <div class="body">
-                            <%= item.body %>
-                        </div>
+                            <div class="body">
+                                <%= item.body %>
+                            </div>
+                        </a>
                     </li>
                 <% }) %>
             </ul>    
         </div>
-
-        <a href="add-news">Add news</a>
     </main>        
 </body>
-</html>
+    

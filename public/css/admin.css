@@ -1,36 +1,85 @@
-body {
-    font-family: arial;
+html {
+    height: 100%;
 }
 
-.admin .nav {
+body {
+    font-family: arial;
+    background-color: rgb(219, 235, 245);
+}
+
+.admin nav {
     background-color: rgb(144, 195, 230);
     padding: 10px;
 }
 
-.admin .nav li {
+.admin ul.news {
+    padding-inline-start: 0;
+}
+
+.admin nav li {
     display: inline-block;
 }
 
-.admin .nav li a {
+.admin nav li a {
     text-decoration: none;
     padding: 10px;
     color: #fff;
 }
 
-.admin .news {
-
-}
-
 .admin .news li {
-    border: 1px solid rgb(144, 195, 230);
+    border: 1px solid rgb(195, 231, 255);
     padding: 10px;
     list-style-type: none;
     margin-bottom: 10px;
+}
+
+.admin .news li a {
+    color: rgb(86, 149, 179);
 }
 
 .admin .news li .title {
     font-weight: bold;
 }
 
-.admin .news li .body {
+.admin .login-form {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 370px;
+}
+
+.admin .login-form .login {
+    display: inline-block;
+    padding: 10px;
+    background-color: rgb(179, 214, 236);
+}
+
+.admin .login-form .login form > div {
+    margin: 5px;
+}
+
+.admin .login-form .login label {
+    width: 120px;
+    display: inline-block;
+    text-align: right;
+}
+
+.admin .login-form .login input {
+    display: inline-block;
+    width: 150px;
+}
+
+.admin .add-news div {
+    margin: 10px;
+}
+
+.admin .add-news label {
+    width: 90px;
+    text-align: right;
+    display: inline-block;
+}
+
+.admin .add-news input,
+.admin .add-news textarea {
+    width: 60%;
+    display: inline-block;
 }

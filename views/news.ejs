@@ -1,0 +1,23 @@
+<%- include('includes/head.ejs') %>
+<title><%= pageTitle %></title>
+</head>
+
+<body>
+    <%- include('includes/nav.ejs') %>
+    <main>
+        <ul class="news">
+            <% news.forEach(function(item){ %>
+                <li>
+                    <div class="title">
+                        <%= item.title %>
+                    </div>
+
+                    <div class="body">
+                        <%= item.body %>
+                    </div>
+                </li>
+            <% }) %>
+        </ul>
+    </main>
+</body>
+</html>

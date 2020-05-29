@@ -10,6 +10,7 @@ router.post('/login', adminController.postLogin);
 router.get('/logout', adminController.postLogout);
 
 router.get('/news', adminController.getNews);
+router.get('/news/:id', adminController.getNewsItem);
 router.get('/add-news', adminController.getAddNews);
 router.post('/add-news', adminController.postAddNews);
 

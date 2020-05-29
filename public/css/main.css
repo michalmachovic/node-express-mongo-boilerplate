@@ -2,12 +2,38 @@ body {
     font-family: arial;
 }
 
-nav ul li {
+nav {
+    background-color: rgb(139, 170, 125);
+    padding: 10px;
+}   
+
+nav li {
     display: inline-block;
+}
+
+nav li a {
+    text-decoration: none;
+    padding: 10px;
+    color: #fff;
 }
 
 .user-message.user-message--error {
     background-color: rgb(197, 115, 115);
     padding: 10px;
     margin-bottom: 10px;
+}
+
+.news {
+    padding-inline-start: 0;
+}
+
+.news li {
+    border: 1px solid rgb(195, 231, 255);
+    padding: 10px;
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.news li .title {
+    font-weight: bold;
 }
