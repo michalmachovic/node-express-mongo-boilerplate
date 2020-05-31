@@ -15,11 +15,6 @@ exports.getNews = (req, res, next) => {
 }
 
 exports.getContact = (req, res, next) => {
-    User.find()
-        .then(user => {
-            console.log(user);
-        });
-
     res.render('contact', {
         pageTitle: 'Contact'
     });

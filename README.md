@@ -19,3 +19,4 @@ You need to insert admin user into `users` table with `bcrypted` password. You c
 ```
 {"email":"user@user.com","password":"$2a$04$CAJfJ1RWefn24.hZNltsDe9CNWi38/3.FyCgjU55JqcrGUswcP3OS"}
 ```
+Admin is at http://localhost:3000/admin/login

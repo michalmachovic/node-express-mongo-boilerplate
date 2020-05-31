@@ -33,8 +33,23 @@ body {
     margin-bottom: 10px;
 }
 
+.admin .news li {
+    color: rgb(86, 149, 179);
+}
+
 .admin .news li a {
     color: rgb(86, 149, 179);
+    margin-left: 10px;
+}
+
+.admin .news li .item {
+    display: inline-block;
+    width: 85%;
+}
+
+.admin .news li .actions {
+    display: inline-block;
+    width: 10%;
 }
 
 .admin .news li .title {

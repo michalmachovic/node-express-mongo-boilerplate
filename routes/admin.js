@@ -11,7 +11,8 @@ router.get('/logout', adminController.postLogout);
 
 router.get('/news', adminController.getNews);
 router.get('/news/:id', adminController.getNewsItem);
-router.get('/add-news', adminController.getAddNews);
-router.post('/add-news', adminController.postAddNews);
+router.get('/news-add', adminController.getNewsAdd);
+router.post('/news-add', adminController.postNewsAdd);
+router.post('/news-delete/:id', adminController.postNewsDelete);
 
 module.exports = router;

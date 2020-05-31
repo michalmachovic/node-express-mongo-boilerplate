@@ -9,7 +9,7 @@
             <ul class="news">
                 <% news.forEach(function(item){ %>
                     <li>
-                        <a href="news/<%= item.id %>">
+                        <div class="item">
                             <div class="title">
                                 <%= item.title %>
                             </div>
@@ -17,7 +17,12 @@
                             <div class="body">
                                 <%= item.body %>
                             </div>
-                        </a>
+                        </div>
+                        
+                        <div class="actions">
+                            <a href="news/<%= item.id %>">Edit</a>
+                            <a href="news-delete/<%= item.id %>">Delete</a>
+                        </div>
                     </li>
                 <% }) %>
             </ul>    
